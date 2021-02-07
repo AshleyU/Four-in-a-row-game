@@ -6,6 +6,14 @@ class Game {
 	}
 
 	/** 
+	 * Returns active player.
+	 * @return  {Object} Player - the active player.
+	 */
+	 get activePlayer() {
+	 	return this.players.find(player => player.active);
+	 }
+
+	/** 
 	 * Creates two player objects
 	 * @return  {Array}    An array of two Player objects.
 	 */
