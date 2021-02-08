@@ -5,6 +5,14 @@ class Token {
 		this.dropped = false;
 	}
 
+	/** 
+	 * Gets left offset of html element.
+	 * @return  {number}   Left offset of token object's htmlToken.
+	 */
+	 get offsetLeft() {
+	 	return this.htmlToken.offsetLeft;
+	 }
+
 	/**
 	*	Draws new HTML Token.
 	*/
