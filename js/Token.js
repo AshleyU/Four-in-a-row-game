@@ -40,6 +40,7 @@ class Token {
 	 	if (this.columnLocation > 0) {
 	 		this.htmlToken.style.left = this.offsetLeft - 76;
 	 		this.columnLocation -= 1;
+	 	}
 	 }
 	 /** 
 	 * Moves html token one column to right.
@@ -50,6 +51,5 @@ class Token {
 	 		this.htmlToken.style.left = this.offsetLeft + 76;
 	 		this.columnLocation += 1;
 	 	}
-
 	}
 }
