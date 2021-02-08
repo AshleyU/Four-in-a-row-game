@@ -3,7 +3,16 @@ class Token {
 		this.owner = owner;
 		this.id = `token-${index}-${owner.id}`;
 		this.dropped = false;
+		this.columnLocation = 0;
 	}
+
+	/** 
+	 * Gets associated htmlToken.
+	 * @return  {element}   Html element associated with token object.
+	 */
+	 get htmlToken() {
+	 	return document.getElementById(this.id);
+	 }
 
 	/** 
 	 * Gets left offset of html element.
