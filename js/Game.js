@@ -140,7 +140,7 @@ class Game {
 	 */
 	 switchPlayers(){
 	 	for (let player of this.players) {
-	 		player.active = player.active === true ? flase : true;
+	 		player.active = player.active === true ? false : true;
 	 	}
 
 	 }
