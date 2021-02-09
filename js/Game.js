@@ -154,6 +154,29 @@ class Game {
 	 	document.getElementById('game-over').style.display = 'block';
 	 	document.getElementById('game-over').textContent = message;
 	 }
+
+	 /** 
+	 * Updates game state after token is dropped.
+	 * @param {Object} token - the token that is being dropped.
+	 @param {Object} target - targeted space for dropped token.   
+	 */
+	updateGameState(token, target){
+		target.mark(token);
+
+	 		if (!this.checkForWin(target)) {
+
+	 			this.switchPlayers();
+
+	 			if (this.activePlayer.checkTokens()) {
+	 				this.activePlayer.activeToken.drawHTMLToken();
+	 				this.ready = true;
+	 			} else {
+	 				this.gameOver('No more tokens');
+	 			}
+	 		} else {
+	 				this.gameOver(`${target.owner.name} wins!`)
+	 		}
+	}
 }
 
 
